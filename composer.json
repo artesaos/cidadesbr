@@ -1,0 +1,26 @@
+{
+  "name": "artesaos/cidades",
+  "description": "",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jansen Felipe",
+      "email": "jansen.felipe@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support": "5.0.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Artesaos\\": "src/Artesaos/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}
