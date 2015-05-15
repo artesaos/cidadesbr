@@ -2,6 +2,10 @@
 
 Tenha no banco de dados do seu projeto Laravel a tabela de cidades brasileiras
 
+[![Latest Stable Version](http://img.shields.io/packagist/v/artesaos/cidadesbr.svg?style=flat)](https://packagist.org/packages/artesaos/cidadesbr)
+[![Total Downloads](http://img.shields.io/packagist/dt/artesaos/cidadesbr.svg?style=flat)](https://packagist.org/packages/artesaos/cidadesbr)
+[![License](http://img.shields.io/packagist/l/artesaos/cidadesbr.svg?style=flat)](https://packagist.org/packages/artesaos/cidadesbr)
+
 ### Como usar
 
 Adicione o package
