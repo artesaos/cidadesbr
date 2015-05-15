@@ -4,7 +4,7 @@ namespace Artesaos\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class ArtesaosServiceProvider extends ServiceProvider {
+class CidadesServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.

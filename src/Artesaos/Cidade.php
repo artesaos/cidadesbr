@@ -4,7 +4,7 @@ namespace Artesaos;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Artesaos extends Model{
+class Cidade extends Model{
 
     public $timestamps = false;
 
