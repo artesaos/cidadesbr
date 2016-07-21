@@ -21,7 +21,7 @@ Adicione o Provider no arquivo `config/app.php`
 // file START ommited
 'providers' => [
     // other providers ommited
-    'Artesaos\Providers\CidadesServiceProvider',
+    'Artesaos\Providers\CityServiceProvider',
 ],
 // file END ommited
 ```
@@ -29,7 +29,7 @@ Adicione o Provider no arquivo `config/app.php`
 Importe migrations/seeds
 
 ```sh
-$ php artisan vendor:publish --provider="Artesaos\Providers\CidadesServiceProvider"
+$ php artisan vendor:publish --provider="Artesaos\Providers\CityServiceProvider"
 ```
 
 Execute
@@ -37,12 +37,12 @@ Execute
 ```sh
 $ composer dump-auto
 $ php artisan migrate
-$ php artisan db:seed --class="CidadesSeeder"
+$ php artisan db:seed --class="CitySeeder"
 ```
 
-### Model Artesaos\Cidade
+### Model Artesaos\City
 
-O model `Artesaos\Cidade` já está disponível para uso:
+O model `Artesaos\City` já está disponível para uso:
 
 ```php
 <?php
@@ -51,7 +51,7 @@ namespace Artesaos;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cidade extends Model{
+class City extends Model{
 
     public $timestamps = false;
 
@@ -65,11 +65,11 @@ As rotas abaixo já estão disponíveis para uso:
 
 ```php
 Route::get('/ufs/', function($uf = null){
-    return response()->json(\Artesaos\Cidade::select('uf')->distinct('uf')->orderBy('uf')->get());
+    return response()->json(\Artesaos\City::select('uf')->distinct('uf')->orderBy('uf')->get());
 });
 
-Route::get('/cidades/{uf}', function($uf = null){
-    return response()->json(\Artesaos\Cidade::where('uf', $uf)->orderBy('nome')->get());
+Route::get('/cities/{uf}', function($uf = null){
+    return response()->json(\Artesaos\City::where('uf', $uf)->orderBy('name')->get());
 });
 ```
      
@@ -80,21 +80,21 @@ Se desejar, um plugin está disponível para carregar seus selectBoxes via ajax.
 Adicione o `scripts.js`
 
 ```html
-<script src="/vendor/artesaos/cidades/js/script.js"></script>
+<script src="/vendor/artesaos/cities/js/script.js"></script>
 ```
 
 HTML:
 
 ```html
 <select id="uf" default="MG"></select>
-<select id="cidade"></select>
+<select id="city"></select>
 ```
 
 JS:
 ```js
 $('#uf').ufs({
     onChange: function(uf){
-        $('#cidade').cidades({uf: uf});
+        $('#cidade').cities({uf: uf});
     }
 });
 ```

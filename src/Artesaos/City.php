@@ -4,10 +4,12 @@ namespace Artesaos;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cidade extends Model{
+class City extends Model{
 
     public $timestamps = false;
-
-    protected $fillable = ['nome', 'uf'];
+    protected $fillable = [
+        'nome',
+        'uf'
+    ];
 }
 

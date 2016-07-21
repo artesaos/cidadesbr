@@ -4,7 +4,7 @@ namespace Artesaos\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class CidadesServiceProvider extends ServiceProvider {
+class CityServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -25,7 +25,7 @@ class CidadesServiceProvider extends ServiceProvider {
         $this->publishes([
             $database . 'migrations' => base_path('database/migrations'),
             $database . 'seeds' => base_path('database/seeds'),
-            __DIR__ . '/../../../public' => base_path('public/vendor/artesaos/cidades'),
+            __DIR__ . '/../../../public' => base_path('public/vendor/artesaos/cities'),
         ]);
 
 

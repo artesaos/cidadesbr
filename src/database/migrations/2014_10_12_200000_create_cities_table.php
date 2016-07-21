@@ -11,9 +11,9 @@ class CreateCidadesTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('cidades', function(Blueprint $table) {
+        Schema::create('cities', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('nome', 255);
+            $table->string('name', 255);
             $table->string('uf', 2);
         });
     }
@@ -24,7 +24,7 @@ class CreateCidadesTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::drop('cidades');
+        Schema::drop('cities');
     }
 
 }
