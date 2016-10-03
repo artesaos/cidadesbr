@@ -1,4 +1,6 @@
-# Cidades BR
+# Brazil Cities
+
+Package alternativo do repositório artesaos/cidadesbr
 
 Tenha no banco de dados do seu projeto Laravel a tabela de cidades brasileiras
 
