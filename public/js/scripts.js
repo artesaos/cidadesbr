@@ -25,7 +25,7 @@
     };
 
 
-    $.fn.cidades = function(options) {
+    $.fn.cities = function(options) {
 
         var select = $(this);
 
@@ -40,11 +40,11 @@
 
             select.html('<option>Carregando..</option>');
 
-            $.get("/cidades/"+settings.uf, null, function (json) {
+            $.get("/cities/"+settings.uf, null, function (json) {
                 select.html('<option value="">Selecione</option>');
 
                 $.each(json, function (key, value) {
-                    select.append('<option value="' + value.id + '" '+((settings.default==value.id || settings.default==value.nome)?'selected':'')+'>' + value.nome + '</option>');
+                    select.append('<option value="' + value.id + '" '+((settings.default==value.id || settings.default==value.name)?'selected':'')+'>' + value.name + '</option>');
                 })
 
             }, 'json');

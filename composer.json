@@ -1,11 +1,17 @@
 {
-  "name": "artesaos/cidadesbr",
-  "description": "",
+  "name": "urameshibr/brazilcities",
+  "description": "Pacote com as cidades brasileiras",
   "license": "MIT",
   "authors": [
     {
+      "name": "Lucas Rodrigues",
+      "email": "lucas.opensource@gmail.com",
+      "role": "Mantenedor"
+    },
+    {
       "name": "Jansen Felipe",
-      "email": "jansen.felipe@gmail.com"
+      "email": "jansen.felipe@gmail.com",
+      "role": "Criador"
     }
   ],
   "require": {
@@ -14,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Artesaos\\": "src/Artesaos/"
+      "Urameshibr\\": "src/Urameshibr/"
     }
   },
   "extra": {
