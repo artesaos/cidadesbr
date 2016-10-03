@@ -14,7 +14,7 @@ Tenha no banco de dados do seu projeto Laravel a tabela de cidades brasileiras
 Adicione o package
 
 ```sh
-$ composer require artesaos/cidadesbr
+$ composer require urameshibr/brazilcities
 ```
 
 Adicione o Provider no arquivo `config/app.php`
@@ -23,7 +23,7 @@ Adicione o Provider no arquivo `config/app.php`
 // file START ommited
 'providers' => [
     // other providers ommited
-    'Artesaos\Providers\CityServiceProvider',
+    'Urameshibr\Providers\CityServiceProvider',
 ],
 // file END ommited
 ```
@@ -31,7 +31,7 @@ Adicione o Provider no arquivo `config/app.php`
 Importe migrations/seeds
 
 ```sh
-$ php artisan vendor:publish --provider="Artesaos\Providers\CityServiceProvider"
+$ php artisan vendor:publish --provider="Urameshibr\Providers\CityServiceProvider"
 ```
 
 Execute
@@ -42,14 +42,14 @@ $ php artisan migrate
 $ php artisan db:seed --class="CitySeeder"
 ```
 
-### Model Artesaos\City
+### Model Urameshibr\City
 
-O model `Artesaos\City` já está disponível para uso:
+O model `Urameshibr\City` já está disponível para uso:
 
 ```php
 <?php
 
-namespace Artesaos;
+namespace Urameshibr;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -57,7 +57,7 @@ class City extends Model{
 
     public $timestamps = false;
 
-    protected $fillable = ['nome', 'uf'];
+    protected $fillable = ['name', 'uf'];
 }
 ```
      
@@ -67,11 +67,11 @@ As rotas abaixo já estão disponíveis para uso:
 
 ```php
 Route::get('/ufs/', function($uf = null){
-    return response()->json(\Artesaos\City::select('uf')->distinct('uf')->orderBy('uf')->get());
+    return response()->json(\Urameshibr\City::select('uf')->distinct('uf')->orderBy('uf')->get());
 });
 
 Route::get('/cities/{uf}', function($uf = null){
-    return response()->json(\Artesaos\City::where('uf', $uf)->orderBy('name')->get());
+    return response()->json(\Urameshibr\City::where('uf', $uf)->orderBy('name')->get());
 });
 ```
      
@@ -82,7 +82,7 @@ Se desejar, um plugin está disponível para carregar seus selectBoxes via ajax.
 Adicione o `scripts.js`
 
 ```html
-<script src="/vendor/artesaos/cities/js/script.js"></script>
+<script src="/vendor/urameshibr/cities/js/script.js"></script>
 ```
 
 HTML:
@@ -96,7 +96,7 @@ JS:
 ```js
 $('#uf').ufs({
     onChange: function(uf){
-        $('#cidade').cities({uf: uf});
+        $('#city').cities({uf: uf});
     }
 });
 ```
