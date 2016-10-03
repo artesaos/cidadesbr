@@ -5,11 +5,13 @@
   "authors": [
     {
       "name": "Jansen Felipe",
-      "email": "jansen.felipe@gmail.com"
+      "email": "jansen.felipe@gmail.com",
+      "role": "Criador"
     },
     {
       "name": "Lucas Rodrigues",
-      "email": "lucas.opensource@gmail.com"
+      "email": "lucas.opensource@gmail.com",
+      "role": "Mantenedor"
     }
   ],
   "require": {
