@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Providers;
+namespace Urameshibr\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -25,7 +25,7 @@ class CityServiceProvider extends ServiceProvider {
         $this->publishes([
             $database . 'migrations' => base_path('database/migrations'),
             $database . 'seeds' => base_path('database/seeds'),
-            __DIR__ . '/../../../public' => base_path('public/vendor/artesaos/cities'),
+            __DIR__ . '/../../../public' => base_path('public/vendor/urameshibr/cities'),
         ]);
 
 

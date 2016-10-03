@@ -10050,7 +10050,7 @@ class CitySeeder extends Seeder {
 
         foreach ($ufs as $uf) {
             $this->command->info('Inserindo cidades de '.$uf[0]['uf'].' ['.  count($uf).']..');
-            \Artesaos\City::insert($uf);
+            \Urameshibr\City::insert($uf);
         }
     }
 
