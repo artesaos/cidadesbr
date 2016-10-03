@@ -4,14 +4,14 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Jansen Felipe",
-      "email": "jansen.felipe@gmail.com",
-      "role": "Criador"
-    },
-    {
       "name": "Lucas Rodrigues",
       "email": "lucas.opensource@gmail.com",
       "role": "Mantenedor"
+    },
+    {
+      "name": "Jansen Felipe",
+      "email": "jansen.felipe@gmail.com",
+      "role": "Criador"
     }
   ],
   "require": {
